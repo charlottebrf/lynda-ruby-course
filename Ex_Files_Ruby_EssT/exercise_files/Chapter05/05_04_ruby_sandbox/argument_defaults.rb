@@ -26,3 +26,4 @@ fruits = ['apple', 'pear', 'banana', 'plum']
 longest_word(fruits)
 
 over_five?(112 / 18)
+#think about where default values should be 
