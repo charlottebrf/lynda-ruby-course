@@ -1,12 +1,17 @@
 # This file is a transcript of the IRB session shown in the movie.
-# You should be able to cut and paste it into IRB to get 
+# You should be able to cut and paste it into IRB to get
 # the same results shown in the comments.
 
+#true or false
+#use it for comparisons
 # irb
 x = 1
 # => 1
+#assigns
 x == 1
+#compares add ==
 # => true
+#is an object
 true.class
 # => TrueClass
 false.class
@@ -29,14 +34,19 @@ y = false
 # => true
 1 <= 4 && 5 <= 100
 # => true
+#both conditions true on both sides
+#if things get complicated can add parenthesis around conditions
 1 <= 4 && 5 <= 100 && 100 >= 200
 # => false
+#boolean works its way down the chain if not everyhing is true whole chain will return false
+
 1 <= 4 || 5 <= 100 || 100 >= 200
 # => true
 16 <= 4 || 5 <= 100 || 100 >= 200
 # => true
 16 <= 4 || 500 <= 100 || 100 >= 200
 # => false
+#will stop once it's found one true
 x.nil?
 # => false
 y.nil?
@@ -49,6 +59,8 @@ z = nil
 # => nil
 z.nil?
 # => true
+#answering a question
+#no problem using a ? for a method
 2.between?(1,4)
 # => true
 2.between?(3,4)
@@ -65,6 +77,6 @@ z.nil?
 # => true
 {'a' => 1, 'b' => 2}.has_key?(:a)
 # => false
-{'a' => 1, 'b' => 2}.has_value?(2)
+{'a' => 1, 'b' => 2}.has_key?(:a)
 # => true
 quit
