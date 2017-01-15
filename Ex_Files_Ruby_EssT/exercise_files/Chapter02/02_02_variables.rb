@@ -1,5 +1,5 @@
 # This file is a transcript of the IRB session shown in the movie.
-# You should be able to cut and paste it into IRB to get 
+# You should be able to cut and paste it into IRB to get
 # the same results shown in the comments.
 
 # irb
@@ -14,6 +14,11 @@ puts x + 2
 # => nil
 first_variable = 3
 # => 3
+#lower case underscored names
+#no mixed cases for variable names
+#give good common sense names that other developers can follow
+#variables point to the value of the object
+#local variables
 aw_counter = 100
 # => 100
 articles_written = 100
@@ -31,3 +36,8 @@ a = 50
 b
 # => 100
 quit
+
+#variables scope indicators
+#$variable = global scope
+#@@variable = class variable
+#@variable = instance variable
