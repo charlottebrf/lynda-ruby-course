@@ -1,10 +1,15 @@
 # This file is a transcript of the IRB session shown in the movie.
-# You should be able to cut and paste it into IRB to get 
+# You should be able to cut and paste it into IRB to get
 # the same results shown in the comments.
 
+#use a range especially when we have very large numbers
+#a range of numbers
 # irb
+
+#inclusive range 1..10 (give all numbers to 10)- more common
+#exclusive range 1..10 (give all numbers to 9)
 1..10
-# => 1..10
+# => 1..10 -range object
 x = 1..10
 # => 1..10
 x.class
@@ -14,7 +19,7 @@ x.class
 # 	from (irb):4
 # 	from :0
 (1..10).class
-# => Range
+# => Range- careful with ranges assign to a value or parenthesis
 x.begin
 # => 1
 x.end
