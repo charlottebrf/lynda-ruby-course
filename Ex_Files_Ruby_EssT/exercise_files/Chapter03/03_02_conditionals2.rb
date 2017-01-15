@@ -47,7 +47,7 @@
 #/or-equals
 # x || = y
 
-#can be big time savers 
+#can be big time savers
 
 # irb
 x = 1
