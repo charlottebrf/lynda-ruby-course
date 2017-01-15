@@ -1,6 +1,16 @@
 # This file is a transcript of the IRB session shown in the movie.
-# You should be able to cut and paste it into IRB to get 
+# You should be able to cut and paste it into IRB to get
 # the same results shown in the comments.
+
+#provide action inside of ruby programmes
+#if boolean
+#...
+#elsif  boolean
+#...
+#else
+#...
+#end
+#no parenthesis or curly braces
 
 # irb
 name = "Kevin"
@@ -30,6 +40,7 @@ end
 # => nil
 puts "This is Kevin" if name == "Kevin"
 # This is Kevin
+#same effect as if else
 # => nil
 puts "This is Kevin" if name == "bob"
 # => nil
