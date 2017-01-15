@@ -1,6 +1,9 @@
 # This file is a transcript of the IRB session shown in the movie.
-# You should be able to cut and paste it into IRB to get 
+# You should be able to cut and paste it into IRB to get
 # the same results shown in the comments.
+
+#With iterators we had code blocks -code blocks are between the do & the end
+#5.times do
 
 # irb --simple-prompt
 array = [1,2,3,4,5]
@@ -14,10 +17,13 @@ array.each {|num| puts num * 20 }
 # => [1, 2, 3, 4, 5]
 x = 1
 # => 1
+#local variables & block variables look very similar
 puts num
 # NameError: undefined local variable or method `num' for main:Object
 # 	from (irb):4
 # 	from :0
+# Looking for local variable
+# do have access to local variable in block
 array.each {|num| puts num * 20 + x }
 # 21
 # 41
