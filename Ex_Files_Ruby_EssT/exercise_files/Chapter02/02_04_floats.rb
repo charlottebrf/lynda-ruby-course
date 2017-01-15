@@ -1,5 +1,5 @@
 # This file is a transcript of the IRB session shown in the movie.
-# You should be able to cut and paste it into IRB to get 
+# You should be able to cut and paste it into IRB to get
 # the same results shown in the comments.
 
 # irb
@@ -23,6 +23,8 @@ x + 1.0
 # => 11.0
 10 / 3
 # => 3
+#An integer / an integer doesn't give the mathematical value of the divison
+#Will erase precision of the calculation
 10.0 / 3
 # => 3.33333333333333
 10 / 3.0
@@ -39,6 +41,8 @@ x + 1.0
 # => 12345
 12345.6789.floor
 # => 12345
+#always round down
 12345.6789.ceil
+#always round up
 # => 12346
 quit
