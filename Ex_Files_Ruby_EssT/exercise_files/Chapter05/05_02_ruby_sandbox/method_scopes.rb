@@ -1,4 +1,4 @@
-value = 7 
+value = 7
 
 def welcome
 	puts "Hello World!"
@@ -11,12 +11,15 @@ end
 # Global, class and instance variables are available
 # inside a method's scope
 @words = ['apple', 'pear', 'banana', 'plum']
-
+#an instance variable runs both inside & outside of method
+#most of the time want to use these sparingly
+#better to pass in the method with arguments
 def longest_word
   longest_word = @words.inject do |memo,word|
     memo.length > word.length ? memo : word
   end
   puts longest_word
+	#local variable name & method name are the same- something to watch out for
 end
 
 def over_five?
@@ -38,5 +41,5 @@ puts value
 # Be careful about naming methods and local variables.
 # They can look the same.
 puts longest_word
-# This is calling the method 'longest_word', not the local 
+# This is calling the method 'longest_word', not the local
 # variable 'longest_word' inside that method.
