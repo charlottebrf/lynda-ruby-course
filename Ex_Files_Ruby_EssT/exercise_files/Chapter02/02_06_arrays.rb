@@ -1,4 +1,4 @@
-# This file is a transcript of the IRB session shown in the movie.
+da# This file is a transcript of the IRB session shown in the movie.
 # You should be able to cut and paste it into IRB to get
 # the same results shown in the comments.
 
@@ -48,7 +48,7 @@ data_set.class
 # => Array
 data_set = nil
 # => nil
-#an empty array & having nothing are 2 different things 
+#an empty array & having nothing are 2 different things
 data_set.class
 # => NilClass
 quit

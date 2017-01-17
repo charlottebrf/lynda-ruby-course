@@ -16,7 +16,7 @@
 "test".object_id
 # => 285760
 :test.object_id
-# => 80818
+# => zx
 #same is reused one time
 hash = {:first_name => 'Kevin', :last_name => 'Skoglund'}
 #hash is variable whereas : is symbol
@@ -33,5 +33,5 @@ hash[:first_name]
 # 	from (irb):10
 # 	from :0
 
-#if a label used to identify a piece of data or pass a message around, use a symbol 
+#if a label used to identify a piece of data or pass a message around, use a symbol
 quit

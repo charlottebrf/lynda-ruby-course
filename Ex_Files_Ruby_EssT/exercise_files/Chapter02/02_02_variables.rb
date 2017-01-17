@@ -15,7 +15,7 @@ puts x + 2
 first_variable = 3
 # => 3
 #lower case underscored names
-#no mixed cases for variable names
+#no mixed cases for variable names, e.g.camel case
 #give good common sense names that other developers can follow
 #variables point to the value of the object
 #local variables

@@ -11,7 +11,7 @@ greeting = "Hello"
 # => "Hello"
 target = 'world'
 # => "world"
-greeting + ' ' + target
+greeting + ' ' + targetp
 # => "Hello world"
 "Gabba"*5
 # => "GabbaGabbaGabbaGabbaGabba"

@@ -24,6 +24,7 @@ puts num
 # 	from :0
 # Looking for local variable
 # do have access to local variable in block
+#name local & block variable different things
 array.each {|num| puts num * 20 + x }
 # 21
 # 41

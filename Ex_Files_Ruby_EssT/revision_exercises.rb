@@ -65,11 +65,17 @@ end
 x = 8
 loop do #do instruction
   x += 4
-  break if x >= 80 #where to exit the 
+  break if x >= 80 #where to exit the
   puts x
 end
 #this will print out all of the outcomes of looping
 
+x = 0
+loop do
+  x -= 2
+  break if x <= -50
+  puts x
+end
 
 #while loop
 x = 5
@@ -84,6 +90,14 @@ end
 
 
 #attributes
+#when we have many repeated code blocks
+1.upto(5) do |num|
+  puts "Hard Brexit..." + num.to_s
+end
 
+brexits = ['hard','soft','Brexit it means....Brexit...']
+brexits.each do |brexit|
+  puts brexit.capitalize
+end
 
 #classes

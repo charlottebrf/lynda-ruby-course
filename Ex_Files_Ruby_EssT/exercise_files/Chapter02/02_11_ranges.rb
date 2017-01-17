@@ -39,9 +39,9 @@ x.include?(1)
 x.include?(10)
 # => true
 y.include?(10)
-# => false
+# => false -different between inclusive & exclusive
 z = [*x]
-# => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]- splat operator
 x
 # => 1..10
 z
