@@ -3,7 +3,7 @@ class Animal #reader method
     @noise = noise
   end
 
-  def noise #writer method 
+  def noise #writer method
     @noise
   end
 end

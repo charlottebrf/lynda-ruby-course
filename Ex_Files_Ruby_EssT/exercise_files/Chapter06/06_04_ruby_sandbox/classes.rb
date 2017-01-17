@@ -1,14 +1,14 @@
 class Animal
-  def set_noise(noise)
+  def set_noise(noise) #setter
     @noise = noise
   end
 
-  def make_noise
+  def make_noise #getter - give access to instance variables 
     @noise
   end
 end
 
-#two different instances with an attribute that can be accessed 
+#two different instances with an attribute that can be accessed
 
 animal1 = Animal.new
 animal1.set_noise("Moo!")
