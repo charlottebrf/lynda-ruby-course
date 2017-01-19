@@ -54,6 +54,24 @@ end
 
 #loops
 
+#floor
+hairs = ['brown','blond','red']
+
+for hair in hairs
+  puts "These are different types of #{hair}"
+
+end
+
+#This is more of a ruby style of hair
+hairs.each do |hair|
+  puts "A hair of type: #{hair}"
+end
+
+change.each {|i| puts "I got #{i}"}
+
+
+
+
 #do loop
 x = 0
 loop do
@@ -84,10 +102,83 @@ while x < 10 #until this boolean is not true
   puts x
 end
 
+#iterator
+def positive_sum(arr)
+total = 0
+arr.each do |element|
+  if element >= 0
+   total = total + element
+  end
+  end
+  return total
+end
+
+arr = [1,2,3,4,5]
+#Test.assert_equals positive_sum([1,2,3,4,5]), 15
+#  Test.assert_equals positive_sum([1,-2,3,4,5]), 13
+#  Test.assert_equals positive_sum([-1,2,3,4,-5]), 9
+
+array = [1,2,3,4,5]
+
+array.each do |x|
+  x += 10
+  print "#{x}"
+end
+
+
+i = 20
+loop do
+  i -= 1
+  print "#{i}"
+  break if i <= 0
+end
+
+i = 20
+loop do
+  i -= 1
+  next if i % 2 != 0
+  print "#{i}"
+  break if i <= 0
+end
+
+
+#for loop
+for num in 1...10
+  puts num
+end
+
+#Inclusive range .. exclusive range ...
+
+#while loop
+counter = 1
+while counter < 11
+  puts counter
+  counter = counter + 1
+end
+
+i = 0
+while i < 5
+  puts i
+    i = i + 1
+end
+
+#until loop- like a backwards while loop
+counter = 1
+until counter > 10
+    puts counter
+  counter +=1
+end
+
+
 #defining a method
+def power_of(num)
+  puts num ** num
+end
+
 
 #Arrays
-
+array = [4,5,6,7,8,9,10]
+array.each {|num| puts num * 20}
 
 #attributes
 #when we have many repeated code blocks
