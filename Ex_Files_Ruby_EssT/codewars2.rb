@@ -16,3 +16,5 @@ countSheeps([true,false,true,false])
 #          true,  false, false, true ,
 #          true,  true,  true,  true ,
 #          false, false, true,  true ]
+
+# https://www.codewars.com/kata/counting-sheep-dot-dot-dot/train/ruby
