@@ -69,6 +69,8 @@ end
 
 change.each {|i| puts "I got #{i}"}
 
+#building lists from the first start with an empty one
+
 
 
 
@@ -101,74 +103,6 @@ while x < 10 #until this boolean is not true
   x +=10
   puts x
 end
-
-#iterator
-def positive_sum(arr)
-total = 0
-arr.each do |element|
-  if element >= 0
-   total = total + element
-  end
-  end
-  return total
-end
-
-arr = [1,2,3,4,5]
-#Test.assert_equals positive_sum([1,2,3,4,5]), 15
-#  Test.assert_equals positive_sum([1,-2,3,4,5]), 13
-#  Test.assert_equals positive_sum([-1,2,3,4,-5]), 9
-
-array = [1,2,3,4,5]
-
-array.each do |x|
-  x += 10
-  print "#{x}"
-end
-
-
-i = 20
-loop do
-  i -= 1
-  print "#{i}"
-  break if i <= 0
-end
-
-i = 20
-loop do
-  i -= 1
-  next if i % 2 != 0
-  print "#{i}"
-  break if i <= 0
-end
-
-
-#for loop
-for num in 1...10
-  puts num
-end
-
-#Inclusive range .. exclusive range ...
-
-#while loop
-counter = 1
-while counter < 11
-  puts counter
-  counter = counter + 1
-end
-
-i = 0
-while i < 5
-  puts i
-    i = i + 1
-end
-
-#until loop- like a backwards while loop
-counter = 1
-until counter > 10
-    puts counter
-  counter +=1
-end
-
 
 #defining a method
 def power_of(num)

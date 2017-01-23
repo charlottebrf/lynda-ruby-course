@@ -7,7 +7,7 @@ def rand_name
 end
 
 def rand_greeting
-  puts [greeter(rand_name), yell(greeter(rand_name))].sample
+  puts [greeter(rand_name), yell(greeter(rand_name()))].sample
 end
 
 def yell(word)
