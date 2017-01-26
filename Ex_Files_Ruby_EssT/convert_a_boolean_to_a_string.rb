@@ -1,12 +1,26 @@
+#
+# def boolean_to_string(b)
+#   if true == true
+#     "true"
+#   else
+#     "false"
+#   end
+# end
 
 def boolean_to_string(b)
-  if true
+  if b  
     "true"
   else
     "false"
   end
 end
 
+
+RSpec.describe "boolean_to_string" do
+   it "" do
+      expect(bus_stops([1,0,3])).to eq([3])
+    end
+ end
 
 # Description:
 #
@@ -17,7 +31,7 @@ end
 # A common idea we often want to represent in code is the concept of true and false. A variable that can either be true or false is called a boolean variable. In this example, the input to boolean_to_string (represented by the variable b) is a boolean.
 #
 # Lastly, when we want to take one action if a boolean is true, and another if it is false, we use an if-statement.
-# 
+#
 # For this kata, don't worry about edge cases like where unexpected input is passed to the function. You'll get to worry about these enough in later exercises.
 
 # Test:
