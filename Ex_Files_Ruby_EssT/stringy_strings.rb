@@ -18,16 +18,6 @@
 #   new_array.join
 # end
 
-def stringy(size)
-  [1..size].map { |x| x.odd?}.map do |odd|
-    if odd
-      "1"
-    else
-      "0"
-    end
-  end.join
-end
-
 # def stringy(size)
 #   if size.odd?
 #     odd_string(size)
