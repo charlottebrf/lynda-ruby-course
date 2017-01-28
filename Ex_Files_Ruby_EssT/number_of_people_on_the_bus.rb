@@ -3,7 +3,9 @@
 def number(bus_stops) #[[1,2],[3,4],[5,6]]
    last_stop = 0 #this is catching the results
    bus_stops.each do |stop| #big error |last_stop|
-    last_stop = last_stop + stop[0]-stop[1] #syntax error stop[0]-[1], using last_stop to store the value
+     got_on = stop[0]
+     got_off = stop[1]
+    last_stop = last_stop + got_on - got_off #syntax error stop[0]-[1], using last_stop to store the value
   end
   return last_stop
 end
