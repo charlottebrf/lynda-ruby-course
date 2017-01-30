@@ -15,6 +15,20 @@ end
 # 3rd_stop = 2nd_stop + [0]-[1]
 # 4th_stop = 3rd_stop +
 
+#Lucy's solution
+def number(bus_stops)
+  number_of_people = 0;
+  bus_stops.each do |stop|
+    number_of_people +=stop[0]
+    number_of_people -= stop[1]
+  end
+  number_of_people
+end
+
+def number(bus_stops)
+  
+end
+
 
 puts number([[10,0],[3,4],[5,6]]) #puts needs to be used here to print the result of the method called to the screen
 # RSpec.describe "bus_stops" do
