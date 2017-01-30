@@ -1,11 +1,11 @@
 class Ball
 
-  def initialize(ball_type)
-    @ball = ball_type
+  def initialize(type = "regular") #That weird assignment in the arguments of the constructor is a default argument. It comes into play if you don't pass an explicit value when calling "new"
+    @type = type
   end
 
-  def type?()
-    @ball
+  def ball_type()
+    @type
   end
 
 end
@@ -13,12 +13,12 @@ end
 RSpec.describe "Ball" do
   it "gives regular for ball 1" do
     ball1 = Ball.new("regular") #@name is storing this instance alongside with felipe
-    expect(ball1.type?()).to eq ("regular")
+    expect(ball1.ball_type()).to eq ("regular")
     p ball1
   end
   it "gives super for ball 2" do
     ball2 = Ball.new("super")
-    expect(ball2.type?()).to eq ("super")
+    expect(ball2.ball_type()).to eq ("super")
     p ball2
   end
 end
