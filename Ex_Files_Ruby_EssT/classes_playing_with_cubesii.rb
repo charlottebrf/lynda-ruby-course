@@ -1,46 +1,21 @@
 class Cube
 
-#Problem1: how can you check if a number is greater than 0 before you initalize? I have created a method that checks this before initalizing
-
-def greater_than_zero(side = 0)
-  side
-end
-
-#Problem2: how can you assign to the parameter 0 if no argument is given? Understandably an error message is produced on wrong number of arguments
-def no_parameter()
-  side = 0
-  side
-end
-
-#Problem3: How do you create 2 constuctors- which appear to be different (yet similar) to initailizers? e.g.
-
-#http://stackoverflow.com/questions/15573513/having-multiple-constructors-in-ruby
-#can have multiple constructors in ruby, which is different to an initialize
-
-  def initialize(side) #First constructor for handling integers
-    @side = side
+  def initialize(side = 0) #First constructor for handling integers
+    @side = side.abs #@data is stored in the instance - every method should read & write data - do my methods use @variables?
   end
 
-#Problem4: How to create the Second constructor for handling no arguments? Believe syntax is incorrect for my solution below. Although it has no arguments I still want it to be initalized with @side
-  # def initialize.1()
-  # @side = side
-  # end
-
-#Problem4: How can you check that your initialize/constructor is functioning as you expect given it is calling the object & initialize is private?
-#error message re: "private method called
-#http://stackoverflow.com/questions/16245315/does-ruby-call-initialize-method-automatically
-
-  def get_side(side) #added in side
-    @side = side.abs #this would also ensure that the original side would be returned as a positive value- should this piece of code take place earlier on however?
+  def get_side
+    @side #this would also ensure that the original side would be returned as a positive value- should this piece of code take place earlier on however?
   end
 
   def set_side(new_side)
     @side = new_side.abs #this would return a positive value
   end
+
 end
 
 
-
+#rewrite the tests where necessary
   RSpec.describe "Cube" do
     it "checks that side value is greater than 0, if it is not greater than zero it reassigns it's value to 0" do
       cube = Cube.new(2)
@@ -71,3 +46,34 @@ end
   #
   # Also we got a problem with negative values. Correct the code so negative values will be switched to positive ones!
   #
+
+  #Problem1: how can you check if a number is greater than 0 before you initalize? I have created a method that checks this before initalizing
+
+  # def greater_than_zero(side = 0)
+  #   side
+  # end
+  #can't do this outside of a method, initalize
+
+  #Problem2: how can you assign to the parameter 0 if no argument is given? Understandably an error message is produced on wrong number of arguments
+  # def no_parameter()
+  #   side = 0
+  #   side
+  # end
+
+  #Problem3: How do you create 2 constuctors- which appear to be different (yet similar) to initailizers? e.g.
+
+  #http://stackoverflow.com/questions/15573513/having-multiple-constructors-in-ruby
+  #can have multiple constructors in ruby, which is different to an initialize
+
+  #Problem4: How to create the Second constructor for handling no arguments? Believe syntax is incorrect for my solution below. Although it has no arguments I still want it to be initalized with @side
+    # def initialize.1()
+    # @side = side
+    # end
+
+  #Problem4: How can you check that your initialize/constructor is functioning as you expect given it is calling the object & initialize is private?
+  #error message re: "private method called
+  #http://stackoverflow.com/questions/16245315/does-ruby-call-initialize-method-automatically
+
+  # def get_method #return variable to see a view of what is in code #get_thing
+  #   @side
+  # end
