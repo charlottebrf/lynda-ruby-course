@@ -2,10 +2,12 @@ class Cube
 
   def initialize(side = 0) #assign side as a default value of 0 if no value is given
     @side = side
+    @length = 10
   end
   #Kata prevents me from assigning a side with a value of 0 as it states do not add a constructor. Given this I will resolve the error message given if 0 is given in side through a conditional statement.
 
-  def get_side
+  # attr_reader(:side, :length)
+  def side #getter method
     @side
   end
 
@@ -13,9 +15,10 @@ class Cube
   # get_side = a function to return side
   #
 
-  def set_side(integer)
+  # attr_writer :side
+  def side=(integer) #setter method
     @side = integer
-    return @side
+    # return @side
   end
   #   set_side = @int
   #   return @int

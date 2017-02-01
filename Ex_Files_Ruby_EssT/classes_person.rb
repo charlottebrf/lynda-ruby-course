@@ -13,7 +13,7 @@ class Person
   end
 
   def greet(other)
-    puts "Hi! " + other.name + "! My name is " + name + "." #could also use some string interpolation here
+    puts "Hi! " + other.name + "! My name is " + @name + "." #could also use some string interpolation here
   end
 
 end
@@ -60,4 +60,4 @@ friend.greet(person)
 #2. all instance variables
 #3. all the object's methods
 #can also overview method names with variable names
-#self is a keyword with special meanng 
+#self is a keyword with special meanng
