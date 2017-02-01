@@ -25,11 +25,12 @@ class CelebrityBingo #remember to keep the arguments in lower case to not be con
 
   def random_celeb_selector(number)
     celeb_choices = ["Nicki Minaj", "Queen Bey", "Kitty Purry", "Justin Bieber"]
-    random_celeb = celeb_choices.sample * number
-    # random_celeb = random_celeb.map do |word| #adding a map to add in white spaces between words- why do I get undefined method for the map method inside random_celeb_selector?
-    #   word + " "
-    #end
-    end
+    random_celeb = [celeb_choices.sample * number]
+     random_celeb.map do |word|
+        word.split(" ")
+      end
+      random_celeb.split
+  end
 
     def lyric_celebrity_matcher(lyric)
       if lyric[0] == celeb_name[0]
@@ -44,8 +45,8 @@ end
 
 cb = CelebrityBingo.new("Celeb Names")
 
-# puts cb.random_celeb_selector(8)
+p cb.random_celeb_selector(8)
 # puts cb.lyric_celebrity_matcher("California girls they're undeniable")
-puts cb.lyric_celebrity_matcher("Starships were meant to fly, hands up & touch the sky!")
+# puts cb.lyric_celebrity_matcher("Starships were meant to fly, hands up & touch the sky!")
 
 # binding.pry
