@@ -26,10 +26,10 @@ class CelebrityBingo #remember to keep the arguments in lower case to not be con
   def random_celeb_selector(number)
     celeb_choices = ["Nicki Minaj", "Queen Bey", "Kitty Purry", "Justin Bieber"]
     random_celeb = [celeb_choices.sample * number]
-     random_celeb.map do |word|
-        word.split(" ")
+     random_celeb = random_celeb.map do |word|
+        word + " "
       end
-      random_celeb.split
+      random_celeb.join(" ").to_s
   end
 
     def lyric_celebrity_matcher(lyric)
