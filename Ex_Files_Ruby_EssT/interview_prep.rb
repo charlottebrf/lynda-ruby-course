@@ -35,11 +35,14 @@ class Animal
   end
 
   def looping_double_name
-        doubled_letters = []
-        name.split("").each do |letter|
-           doubled_letters.push(letter * 2) #.push <<
-        end
-        doubled_letters
+    name.split("").map do |letter|
+      letter * 2
+    end
+        # doubled_letters = []
+        # name.split("").each do |letter|
+        #    doubled_letters.push(letter * 2) #.push <<
+        # end
+        # doubled_letters
   end
 
 
