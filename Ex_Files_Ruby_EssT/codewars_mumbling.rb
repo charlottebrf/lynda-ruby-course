@@ -20,7 +20,7 @@ def mumbling(string)
 end
 
 #.push adds to an array like + ""
-#.capitzalize needs to be added in as separate paranthesis 
+#.capitzalize needs to be added in as separate paranthesis
 
 RSpec.describe "mumbling" do
   # it "given a string should return return the characters doubled in the string" do
