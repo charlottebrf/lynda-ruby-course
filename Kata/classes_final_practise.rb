@@ -22,7 +22,6 @@ attr_writer :name,
   def name=(name)
     @name = name
   end
-
 end
 
 class Car < Vehicle
@@ -53,13 +52,15 @@ end
 
 
 
+
 new_car = Vehicle.new("Ford", 25, 3)
 ford_focus = Car.new("XP2", "H2 LOL")
 mini = Car.new("P2S", "YL SOL")
 mini.model=("Tiny Mini")
 ford_focus.name=("Ford Fiesta")
+p new_car.gets_registration
 # puts ford_focus.gets_registration
-puts mini.gets_insurance("AA")
+# puts mini.gets_insurance("AA")
 
 
 #car- model, number plate
