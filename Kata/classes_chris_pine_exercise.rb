@@ -39,32 +39,40 @@ class OrangeTree
       "Your tree does not yet produce fruit, but don't worry it will once it's over 2 years of age!"
     elsif age >= 3 && age <=6
       orange_count = age + 10
-      "Exciting times your tree has #{orange_count} oranges"
+      "#{orange_count}"
     elsif age >= 20
       "Sorry but as your tree has died, it can't produce fruit."
     else
       orange_count = age + 20
-      "Exciting times your tree has #{orange_count} oranges!"
+      "#{orange_count}"
     end
   end
 
   def pick_an_orange
-    if age >= 3 && age <=6 #duplication of code here- how to create orange_count as instance variable if dependent on conditions?
-      orange_count = age + 10
-      "You now have #{orange_count - 1} oranges left. What a delicious orange!"
-    elsif age >= 6 && age < 20
-      orange_count = age + 20
-      "You now have #{orange_count - 1} oranges left. What a delicious orange!"
-     else
-      "Sorry looks like you have no oranges left!"
-    end
+      if count_the_oranges > 0
+        "You now have #{count_the_oranges - 1} oranges left. What a delicious orange!"
+      else
+        "Sorry looks like you have no oranges left!"
+      end
   end
+
+end
+
+  #   if age >= 3 && age <=6 #duplication of code here- how to create orange_count as instance variable if dependent on conditions?
+  #     orange_count = age + 10
+  #     "You now have #{orange_count - 1} oranges left. What a delicious orange!"
+  #   elsif age >= 6 && age < 20
+  #     orange_count = age + 20
+  #     "You now have #{orange_count - 1} oranges left. What a delicious orange!"
+  #    else
+  #     "Sorry looks like you have no oranges left!"
+  #   end
+  # end
   #need to address the fact that this isn't a programme for many years of picking oranges
   #pickAnOrange - reduces the @orangeCount by 1 & returns a string telling you how delicious the orange was
   #else tells you there are no more oranges to pick this years
   #make sure any oranges you pick one year fall off before the next year
 
-end
 
 murcia_orange = OrangeTree.new(40,5)
 seville_orange = OrangeTree.new(6,22)
