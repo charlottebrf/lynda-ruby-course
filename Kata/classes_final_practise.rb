@@ -27,13 +27,14 @@ end
 class Car < Vehicle
 
   attr_reader :model, :number_plate
+  attr_writer :model
   def initialize(model, number_plate)
     @model = model
     @number_plate = number_plate
   end
 
   def gets_registration
-    @model + @number_plate
+    model + number_plate
   end
 
   def gets_insurance(company)
@@ -44,9 +45,9 @@ class Car < Vehicle
     end
   end
 
-  def model=(model)
-    @model = model
-  end
+  # def model=(model) #use this method if I didn't have an attr_writer
+  #   @model = model
+  # end
 end
 
 
@@ -58,7 +59,7 @@ ford_focus = Car.new("XP2", "H2 LOL")
 mini = Car.new("P2S", "YL SOL")
 mini.model=("Tiny Mini")
 ford_focus.name=("Ford Fiesta")
-p new_car.gets_registration
+p mini.gets_registration
 # puts ford_focus.gets_registration
 # puts mini.gets_insurance("AA")
 
