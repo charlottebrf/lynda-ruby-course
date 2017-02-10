@@ -8,7 +8,7 @@
 class String
 
   def digit?(string)
-    if string.include? "24"
+    if string =~ /\d/
       true
     else
       false
@@ -29,8 +29,9 @@ RSpec.describe "String" do
     expect(new_string.digit?("hello")).to eq (false)
   end
 
-  it "should return false if the string contains digits & letters" do
-    
+  it "should return f" do
+    new_string = String.new
+    expect(new_string.digit?(1)).to eq (true)
   end
 end
 
@@ -38,7 +39,7 @@ end
 #symbols?
 #empty string?
 
-
+#=~ /\d/
 #string class
 #expect error message for first test
 #tdd- write test first & watch it fail - test in a separate file
