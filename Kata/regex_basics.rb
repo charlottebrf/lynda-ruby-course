@@ -8,7 +8,7 @@
 class String
 
   def digit?(string)
-    if string =~ /\d/
+    if string =~ /\d/ #how can i specify a range from a string "0..9" so first test should return false? ("0..9").to_a.join
       true
     else
       false
@@ -29,9 +29,21 @@ RSpec.describe "String" do
     expect(new_string.digit?("hello")).to eq (false)
   end
 
-  it "should return f" do
+  it "should return false if string contains symbols" do
     new_string = String.new
-    expect(new_string.digit?(1)).to eq (true)
+    expect(new_string.digit?("$&*%")).to eq (false)
+  end
+
+  it "should return false if string is empty" do
+    new_string = String.new
+    expect(new_string.digit?("")).to eq (false)
+  end
+
+  it "should return true if string contains a range between 0-9" do
+    new_string = String.new
+    expect(new_string.digit?("0")).to eq (true)
+    expect(new_string.digit?("1")).to eq (true)
+    expect(new_string.digit?("9")).to eq (true)
   end
 end
 
@@ -39,7 +51,11 @@ end
 #symbols?
 #empty string?
 
+
+# \d Will find 1 (!) digit. \d\d will find two consecutive ones. \d+ will find many, but at least one consecutive characters.
+
 #=~ /\d/
+#.include? (0-9)
 #string class
 #expect error message for first test
 #tdd- write test first & watch it fail - test in a separate file
