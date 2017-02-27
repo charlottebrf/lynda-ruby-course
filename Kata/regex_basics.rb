@@ -8,7 +8,7 @@
 class String
 
   def digit?(string)
-    if string =~ /\d/ #how can i specify a range from a string "0..9" so first test should return false? ("0..9").to_a.join
+    if string =~ /^\d$/ #how can i specify a range from a string "0..9" so first test should return false? ("0..9").to_a.join
       true
     else
       false
@@ -17,11 +17,22 @@ class String
 
 end
 
+#another way of solving method
+# def digit?
+#   if self =~ /^\d$/
+#     true
+#   else
+#     false
+#   end
+# end
+#
+# end
+
 
 RSpec.describe "String" do
-  it "should return true if the string contains only digits" do
+  it "should return false if the string contains multiple digits" do
     new_string = String.new
-    expect(new_string.digit?("24")).to eq (true)
+    expect(new_string.digit?("24")).to eq (false)
   end
 
   it "should return false if the string contains letters" do
@@ -32,6 +43,11 @@ RSpec.describe "String" do
   it "should return false if string contains symbols" do
     new_string = String.new
     expect(new_string.digit?("$&*%")).to eq (false)
+  end
+
+  it "should return false if string contains numbers and symbols" do
+    new_string = String.new
+    expect(new_string.digit?("45$&*")).to eq (false)
   end
 
   it "should return false if string is empty" do
