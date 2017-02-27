@@ -1,5 +1,6 @@
 def say_hello(name, city, state)
-  name = name << [1].to_s
+   name = name[0] << name[1]
+   name = name.split(" ") #need to correctly split the string 
   "Hello #{name}! Welcome to #{city}, #{state}!"
 end
 
